@@ -6,6 +6,8 @@ if [ "$(uname -s)" == "Darwin" ]; then
         -L"$(brew --prefix googletest)/lib" \
         -lgtest -lgtest_main -pthread
 else
-    g++ -o main main.cpp -lgtest -lgtest_main -pthread
+    g++ -o main task0/main.cpp -lgtest -lgtest_main -pthread 
+    # -lgtest links main with the gtest lib
+    # -pthread gives it access to POSIX threading support
 fi
 ./main
