@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd task1
+
 # cleanup
 rm -rf obj_dir
 rm -f *.vcd
